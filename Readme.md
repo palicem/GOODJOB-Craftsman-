@@ -1,5 +1,5 @@
 **定制商城 1.0.0version**
-**接入AI大模型进行详细定制**
+## 接入AI大模型进行详细定制
 
 ## 环境准备
     Node.js(推荐版本: v16.x 或更高)
@@ -17,7 +17,7 @@
 ## 确保安装好所有依赖
     `npm install`
 
-##项目启动方式
+## 项目启动方式
     进入`admin-system`目录：`npm run dev`
     进入`backend-api`目录：`node server.js`，需确保MongoDB服务正在运行。
     进入`client-system`目录：`npm run dev:h5`

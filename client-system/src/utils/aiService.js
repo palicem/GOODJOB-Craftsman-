@@ -1,7 +1,7 @@
-import { CHAT_API_KEY } from './ai.secret.js';
+import { CHAT_API_KEY,IMAGE_ACCESS_KEY,IMAGE_SECRET_KEY } from './ai.secret.js';
 
-const imageApiKey = 'AKLTODVmNjBkNmEyYjNiNDE5N2IyYWY2MjY3YWU5ZTliNmU';
-const secretKey = 'TXpCbE1EY3dNRFJqT0Rjek5ESmpNRGt3TkdGbFlUZ3lZV0ZoTXpZMU5tUQ==';
+const imageApiKey = IMAGE_ACCESS_KEY;
+const secretKey = IMAGE_SECRET_KEY;
 const apiKey = CHAT_API_KEY;
 
 /**

@@ -27,8 +27,8 @@ const AI_CONFIG = {
   maxTokens: 2000,
   // 图片生成相关配置
   baseUrl: 'https://visual.volcengineapi.com',
-  secretKey: 'TXpCbE1EY3dNRFJqT0Rjek5ESmpNRGt3TkdGbFlUZ3lZV0ZoTXpZMU5tUQ==',
-  imageApiKey: 'AKLTODVmNjBkNmEyYjNiNDE5N2IyYWY2MjY3YWU5ZTliNmU'
+  secretKey: IMAGE_SECRET_KEY,
+  imageApiKey: IMAGE_ACCESS_KEY
 };
 
 // 模拟回复数据库 - 当API调用失败时使用

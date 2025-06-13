@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录页面设计</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            display: flex;
+            background-color: #f5f6fa;
+        }
+
+        .container {
+            display: flex;
+            width: 100vw;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        /* 登录部分样式 */
+        .login-preview {
+            width: 375px;
+            height: 667px;
+            background: linear-gradient(135deg, #00b894, #00cec9);
+            border-radius: 20px;
+            padding: 20px;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0, 184, 148, 0.2);
+        }
+
+        .login-card {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 85%;
+            background: rgba(255, 255, 255, 0.98);
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .login-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .login-header h1 {
+            color: #2d3436;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e2e8f0;
+            border-radius: 10px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .input-group input:focus {
+            border-color: #00b894;
+            outline: none;
+        }
+
+        .input-group label {
+            position: absolute;
+            left: 15px;
+            top: -10px;
+            background: white;
+            padding: 0 5px;
+            color: #636e72;
+            font-size: 14px;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .login-button {
+            flex: 2;
+            padding: 15px;
+            background: linear-gradient(135deg, #00b894, #00cec9);
+            border: none;
+            border-radius: 10px;
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .register-button {
+            flex: 1;
+            padding: 15px;
+            background: #fff;
+            border: 2px solid #00b894;
+            border-radius: 10px;
+            color: #00b894;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .login-button:hover, .register-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 184, 148, 0.2);
+        }
+
+        .register-button:hover {
+            background: #f8fafb;
+        }
+
+        .forgot-password {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .forgot-password a {
+            color: #00b894;
+            text-decoration: none;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .forgot-password a:hover {
+            color: #00cec9;
+            text-decoration: underline;
+        }
+
+        /* 设计说明部分样式 */
+        .design-notes {
+            flex: 1;
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .design-notes h2 {
+            color: #2d3436;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .design-notes ul {
+            list-style-type: none;
+        }
+
+        .design-notes li {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            position: relative;
+            line-height: 1.6;
+        }
+
+        .design-notes li::before {
+            content: "•";
+            color: #00b894;
+            font-size: 20px;
+            position: absolute;
+            left: 0;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .login-preview {
+                width: 100%;
+                max-width: 375px;
+                height: 600px;
+            }
+            
+            .design-notes {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 登录页面预览 -->
+        <div class="login-preview">
+            <div class="login-card">
+                <div class="login-header">
+                    <h1>欢迎登录</h1>
+                </div>
+                <form id="loginForm">
+                    <div class="input-group">
+                        <label for="username">账号</label>
+                        <input type="text" id="username" placeholder="请输入您的账号">
+                    </div>
+                    <div class="input-group">
+                        <label for="password">密码</label>
+                        <input type="password" id="password" placeholder="请输入您的密码">
+                    </div>
+                    <div class="button-group">
+                        <button type="button" class="login-button" onclick="handleLogin()">登录</button>
+                        <button type="button" class="register-button" onclick="handleRegister()">注册</button>
+                    </div>
+                    <div class="forgot-password">
+                        <a href="#" onclick="handleForgotPassword()">忘记密码？</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- 设计说明 -->
+        <div class="design-notes">
+            <h2>设计说明</h2>
+            <ul>
+                <li><strong>视觉层次：</strong>采用清新的蓝绿色渐变背景，搭配简洁的白色卡片，营造出清爽现代的视觉效果。</li>
+                <li><strong>色彩方案：</strong>主色调采用充满活力的蓝绿色系，体现出科技感和专业性，给人以信任感。</li>
+                <li><strong>按钮设计：</strong>主次按钮采用不同样式，登录按钮突出，注册按钮采用镂空设计，层次分明。</li>
+                <li><strong>交互体验：</strong>所有可点击元素都有悬停效果，提供即时视觉反馈。</li>
+                <li><strong>响应式布局：</strong>页面完美适配各种移动设备尺寸，确保最佳显示效果。</li>
+                <li><strong>空间利用：</strong>合理的内边距和间距设计，让界面既紧凑又不显拥挤。</li>
+                <li><strong>辅助功能：</strong>添加忘记密码链接，增强用户便利性。</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function handleLogin() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            
+            if (!username || !password) {
+                alert('请填写完整的登录信息');
+                return;
+            }
+            
+            // 这里添加登录逻辑
+            alert('登录成功！');
+        }
+
+        function handleRegister() {
+            // 这里添加注册逻辑
+            alert('即将跳转到注册页面...');
+        }
+
+        function handleForgotPassword() {
+            // 这里添加忘记密码逻辑
+            alert('即将跳转到密码重置页面...');
+        }
+
+        // 添加输入框焦点效果
+        const inputs = document.querySelectorAll('input');
+        inputs.forEach(input => {
+            input.addEventListener('focus', () => {
+                input.parentElement.classList.add('focused');
+            });
+            
+            input.addEventListener('blur', () => {
+                input.parentElement.classList.remove('focused');
+            });
+        });
+    </script>
+</body>
+</html>

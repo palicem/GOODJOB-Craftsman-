@@ -1,0 +1,227 @@
+/* miniprogram.scss - 小程序通用样式 */
+
+/* 全局CSS变量 */
+:root {
+  --primary-color: #00BFA6;
+  --danger-color: #ff4d4f;
+  --warning-color: #ffaa00;
+  --success-color: #52c41a;
+  --info-color: #1890ff;
+  --text-color: #333333;
+  --text-color-secondary: #666666;
+  --text-color-placeholder: #999999;
+  --border-color: #eeeeee;
+  --background-color: #f7f7f7;
+  --white: #FFFFFF;
+  --red: #FF4D4F;
+  --navbar-height: 90rpx;
+  --tab-bar-height: 100rpx;
+  --border-radius: 10rpx;
+  --cart-footer-height: 100rpx; /* 购物车底部栏高度 */
+  --page-max-width: 750rpx; /* 页面最大宽度 */
+}
+
+/* 全局通用样式 */
+page {
+  background-color: #f7f7f7;
+  font-size: 28rpx;
+  color: var(--text-color);
+  line-height: 1.5;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -webkit-overflow-scrolling: touch;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+/* 容器样式 */
+.mp-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  background-color: var(--background-color);
+}
+
+/* 内容区域 */
+.mp-content {
+  flex: 1;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: calc(var(--tab-bar-height) + env(safe-area-inset-bottom, 0));
+}
+
+/* 带导航栏的内容区域 */
+.mp-content-with-navbar {
+  margin-top: calc(var(--status-bar-height, 25px) + var(--navbar-height));
+}
+
+/* 导航栏样式 */
+.mp-nav-header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  background-color: var(--primary-color);
+}
+
+.mp-status-bar {
+  height: var(--status-bar-height, 25px);
+  width: 100%;
+}
+
+.mp-nav-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--navbar-height);
+  padding: 0 30rpx;
+}
+
+.mp-nav-title {
+  font-size: 32rpx;
+  font-weight: 500;
+  color: var(--white);
+  text-align: center;
+}
+
+.mp-nav-back {
+  position: absolute;
+  left: 30rpx;
+  width: 60rpx;
+  height: 60rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 卡片样式 */
+.mp-card {
+  background-color: var(--white);
+  border-radius: var(--border-radius);
+  margin-bottom: 20rpx;
+  overflow: hidden;
+  box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.05);
+}
+
+/* 表单元素样式 */
+.mp-form-item {
+  padding: 20rpx 30rpx;
+  border-bottom: 1rpx solid var(--border-color);
+  background-color: var(--white);
+}
+
+.mp-input {
+  width: 100%;
+  height: 90rpx;
+  padding: 0 20rpx;
+  font-size: 28rpx;
+  color: var(--text-color);
+  background-color: #FAFAFA;
+  border: 1rpx solid #E0E0E0;
+  border-radius: var(--border-radius);
+  box-sizing: border-box;
+}
+
+/* 按钮样式 */
+.mp-button {
+  width: 100%;
+  height: 90rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30rpx;
+  font-weight: 500;
+  border-radius: var(--border-radius);
+  box-sizing: border-box;
+}
+
+.mp-button-primary {
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: none;
+}
+
+.mp-button-outline {
+  background-color: var(--white);
+  color: var(--primary-color);
+  border: 1rpx solid var(--primary-color);
+}
+
+/* 文本样式 */
+.mp-text-primary {
+  color: var(--primary-color);
+}
+
+.mp-text-desc {
+  color: var(--text-color-placeholder);
+  font-size: 26rpx;
+}
+
+.mp-text-error {
+  color: var(--red);
+  font-size: 24rpx;
+}
+
+/* H5环境适配 */
+/* #ifdef H5 */
+.mp-container {
+  max-width: 750rpx;
+  margin: 0 auto;
+}
+
+.mp-status-bar {
+  height: 0;
+}
+/* #endif */
+
+/* 工具类 */
+.mp-flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mp-flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mp-padding {
+  padding: 30rpx;
+}
+
+.mp-margin-top {
+  margin-top: 20rpx;
+}
+
+.mp-margin-bottom {
+  margin-bottom: 20rpx;
+}
+
+.mp-text-center {
+  text-align: center;
+}
+
+/* 安全区适配 */
+.safe-area-inset-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 0);
+}
+
+/* 主题色按钮 */
+.btn-primary {
+  background-color: var(--primary-color);
+  color: #ffffff;
+}
+
+/* 危险色按钮 */
+.btn-danger {
+  background-color: var(--danger-color);
+  color: #ffffff;
+} 

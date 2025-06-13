@@ -1,0 +1,258 @@
+{
+	"pages": [
+		{
+			"path": "pages/login/login",
+			"style": {
+				"navigationBarTitleText": "登录",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/register/register",
+			"style": {
+				"navigationBarTitleText": "注册",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/main/main",
+			"style": {
+				"navigationBarTitleText": "首页",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/orders/orders",
+			"style": {
+				"navigationBarTitleText": "我的订单",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/main/home/home",
+			"style": {
+				"navigationBarTitleText": "首页",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/main/message/message",
+			"style": {
+				"navigationBarTitleText": "消息",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/main/cart/cart",
+			"style": {
+				"navigationBarTitleText": "购物车",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/main/profile/profile",
+			"style": {
+				"navigationBarTitleText": "我的",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "uni-app"
+			}
+		},
+		{
+			"path": "pages/chat/customer-service",
+			"style": {
+				"navigationBarTitleText": "客服聊天",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/search/search",
+			"style": {
+				"navigationBarTitleText": "搜索",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/search/search-result",
+			"style": {
+				"navigationBarTitleText": "搜索结果",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/category/list",
+			"style": {
+				"navigationBarTitleText": "分类商品",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/products/custom-list",
+			"style": {
+				"navigationBarTitleText": "可定制商品",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/products/promo-list",
+			"style": {
+				"navigationBarTitleText": "热门定制",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/products/case-list",
+			"style": {
+				"navigationBarTitleText": "定制案例",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/products/product-detail",
+			"style": {
+				"navigationBarTitleText": "商品详情",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/shop/shop-detail",
+			"style": {
+				"navigationBarTitleText": "店铺详情",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/user/settings",
+			"style": {
+				"navigationBarTitleText": "设置",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/user/user-info",
+			"style": {
+				"navigationBarTitleText": "个人资料",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/user/shipping-address",
+			"style": {
+				"navigationBarTitleText": "收货地址",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/user/edit-field",
+			"style": {
+				"navigationBarTitleText": "编辑信息",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/user/address-edit",
+			"style": {
+				"navigationBarTitleText": "编辑地址",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/user/favorites",
+			"style": {
+				"navigationBarTitleText": "我的收藏",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/chat/ai-chat",
+			"style": {
+				"navigationBarTitleText": "AI创意助手",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/chat/design-chat",
+			"style": {
+				"navigationBarTitleText": "AI定制助手",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/user/favorite-shops",
+			"style": {
+				"navigationStyle": "custom",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/orders/trade",
+			"style": {
+				"navigationBarTitleText": "确认订单",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/orders/order-detail",
+			"style": {
+				"navigationBarTitleText": "订单详情",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/chat/system-service",
+			"style": {
+				"navigationBarTitleText": "系统客服",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/products/all-products-list",
+			"style": {
+				"navigationBarTitleText": "所有商品",
+				"navigationStyle": "custom"
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+		"color": "#999999",
+		"selectedColor": "#00BFA6",
+		"backgroundColor": "#ffffff",
+		"borderStyle": "black",
+		"list": [
+			{
+				"pagePath": "pages/main/home/home",
+				"text": "首页",
+				"iconPath": "static/images/tabbar/home.png",
+				"selectedIconPath": "static/images/tabbar/home-active.png"
+			},
+			{
+				"pagePath": "pages/main/message/message",
+				"text": "消息",
+				"iconPath": "static/images/tabbar/message.png",
+				"selectedIconPath": "static/images/tabbar/message-active.png"
+			},
+			{
+				"pagePath": "pages/main/cart/cart",
+				"text": "购物车",
+				"iconPath": "static/images/tabbar/cart.png",
+				"selectedIconPath": "static/images/tabbar/cart-active.png"
+			},
+			{
+				"pagePath": "pages/main/profile/profile",
+				"text": "我的",
+				"iconPath": "static/images/tabbar/profile.png",
+				"selectedIconPath": "static/images/tabbar/profile-active.png"
+			}
+		]
+	}
+}
